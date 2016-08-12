@@ -1,0 +1,57 @@
+{
+  "name": "code-dir",
+  "version": "0.0.0",
+  "description": "Find the parent directory for top level projects.",
+  "homepage": "https://github.com/sholladay/code-dir",
+  "main": "index.js",
+  "author": {
+    "name": "Seth Holladay",
+    "url": "http://seth-holladay.com",
+    "email": "me@seth-holladay.com"
+  },
+  "scripts": {
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sholladay/code-dir.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sholladay/code-dir/issues",
+    "email": "me@seth-holladay.com"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "license": "MPL-2.0",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "pkg-down": "^0.1.0"
+  },
+  "devDependencies": {
+    "eslint-config-tidy": "^0.3.0",
+    "xo": "^0.16.0"
+  },
+  "keywords": [
+    "package",
+    "pkg",
+    "project",
+    "author",
+    "tool",
+    "tooling",
+    "find",
+    "search",
+    "walk",
+    "down",
+    "dir",
+    "dirs",
+    "dev",
+    "development",
+    "code"
+  ],
+  "xo": {
+    "extend": "tidy"
+  }
+}
