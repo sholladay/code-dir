@@ -12,13 +12,12 @@ const stripDeps = (dir) => {
 
 // Walk down the filesystem and find the parent directory for the
 // topmost Node project.
-const codeDir = (input) => {
+const codeDir = async (input) => {
     const cwd = path.resolve(input || '');
     const deepest = stripDeps(cwd);
 
-    return pkgDown(deepest).then((filepath) => {
-        return filepath && path.join(filepath, '..', '..');
-    });
+    const filepath = await pkgDown(deepest);
+    return filepath && path.join(filepath, '..', '..');
 };
 
 module.exports = codeDir;
