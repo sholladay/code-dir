@@ -1,6 +1,6 @@
 {
   "name": "code-dir",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Find the parent directory for top level projects.",
   "homepage": "https://github.com/sholladay/code-dir",
   "main": "index.js",
