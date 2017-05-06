@@ -31,8 +31,8 @@
     "pkg-down": "^0.1.0"
   },
   "devDependencies": {
-    "eslint-config-tidy": "^0.3.0",
-    "xo": "^0.16.0"
+    "eslint-config-tidy": "^0.4.1",
+    "xo": "^0.18.2"
   },
   "keywords": [
     "package",
