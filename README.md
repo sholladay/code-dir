@@ -32,16 +32,16 @@ codeDir().then((dirPath) => {
 
 ## API
 
-### codeDir(cwd?)
+### codeDir(cwd)
 
-Returns a promise for the path of the topmost Node project's parent directory.
+Returns a `Promise` for the path of the topmost project's parent directory. A project is a directory that contains either `.git` or `package.json`.
 
 #### cwd
 
 Type: `string`<br>
 Default: `process.cwd()`
 
-Directory to start from.
+Current working directory the search is based on. This is the deepest directory that could be returned. If neither it nor any of its parent directories are projects, then as a last resort, its children are checked to determine if any of them are projects, in case the working directory itself is the code directory, since that is a common case.
 
 ## Contributing
 

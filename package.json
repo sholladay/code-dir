@@ -28,11 +28,13 @@
     "index.js"
   ],
   "dependencies": {
-    "pkg-down": "^0.1.0"
+    "children-dirs": "^1.0.1",
+    "find-down": "^0.1.3",
+    "locate-path": "^2.0.0"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
-    "eslint-config-tidy": "^0.4.1",
+    "ava": "^0.22.0",
+    "eslint-config-tidy": "^0.5.0",
     "mkdirtemp": "^1.1.0",
     "xo": "^0.18.2"
   },

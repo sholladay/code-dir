@@ -22,9 +22,24 @@ test('returns null if not found', async (t) => {
     t.is(dirPath, null);
 });
 
-test('returns parents of cwd if it contains package.json', async (t) => {
+test('returns parent of cwd if it contains package.json', async (t) => {
     const cwd = await mkdirtemp();
-    writeFile(path.resolve(cwd, 'package.json'), '');
+    await writeFile(path.resolve(cwd, 'package.json'), '');
     const dirPath = await codeDir(cwd);
     t.is(dirPath, path.dirname(cwd));
+});
+
+test('returns parent of cwd if it is a repository', async (t) => {
+    const cwd = await mkdirtemp();
+    await writeFile(path.resolve(cwd, '.git'), '');
+    const dirPath = await codeDir(cwd);
+    t.is(dirPath, path.dirname(cwd));
+});
+
+test('returns cwd if it has a child that contains package.json', async (t) => {
+    const cwd = await mkdirtemp();
+    const child = await mkdirtemp(cwd);
+    await writeFile(path.resolve(child, 'package.json'), '');
+    const dirPath = await codeDir(cwd);
+    t.is(dirPath, cwd);
 });
